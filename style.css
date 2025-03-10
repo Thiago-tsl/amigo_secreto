@@ -17,8 +17,7 @@
 
 body {
     height: 100vh;
-    background: rgb(0,212,255);
-    background: radial-gradient(circle, rgba(0,212,255,1) 0%, rgba(4,150,221,1) 33%, rgba(4,145,218,1) 37%, rgba(12,10,142,1) 100%);
+    background: var(--color-secondary);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +27,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 100%;
+    width: 50%;
 }
 
 /* Banner */
@@ -41,27 +40,27 @@ body {
 }
 
 /* Seção de entrada */
+
 .input-section {
     flex: 60%;
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(254,255,225,1) 100%);
-    border: 1px solid #000;
-    border-radius: 100px 100px 0 0;
+    background-color: #a8bce6; 
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
     width: 100%;
+    border-radius: 80px 80px 0 0;
+
 }
 
 /* Títulos */
 .main-title {
-    font-size: 48px;
-    font-family: "Merriweather", serif;
+    font-size: 68px;
+    font-family: "Audiowide", serif;
     font-weight: 900;
-    font-style: "Audiowide", serif;
-    color: var(--color-white);
-    -webkit-text-stroke: 1px rgb(0, 0, 0);
+    color: var(--color-primary);
+    flex-direction: column;
+    text-align: center;
 }
 
 .section-title {
@@ -70,7 +69,7 @@ body {
     font-weight: 200;
     color: var(--color-primary);
     margin: 10px 0;
-    text-align: center;
+    text-align:  center;
 }
 
 /* Contêineres de entrada e botão */
@@ -181,4 +180,14 @@ ul {
 
 .button-draw:hover {
     background-color: rgb(234, 44, 44);
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        width: 90%; /* Aumenta a largura em telas menores */
+    }
+
+    .main-title {
+        font-size: 48px; /* Reduz o tamanho do título em telas menores */
+    }
 }
